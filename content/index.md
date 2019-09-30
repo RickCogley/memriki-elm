@@ -1,5 +1,5 @@
 ---
-title: Memriki - Rick Cogley's aide-memoire
+title: Memriki - Rick Cogley's aide-mémoire
 type: page
 ---
 

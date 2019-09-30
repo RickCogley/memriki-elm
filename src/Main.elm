@@ -199,7 +199,7 @@ pageView model siteMetadata page =
             }
 
         Metadata.BlogIndex ->
-            { title = "elm-pages blog"
+            { title = "Memriki blog"
             , body =
                 Element.column [ Element.width Element.fill ]
                     [ header page.path
@@ -373,25 +373,25 @@ head metadata =
                     }
                 , description = siteTagline
                 , locale = Nothing
-                , title = "elm-pages blog"
+                , title = "Memriki blog"
                 }
                 |> Seo.website
 
 
 canonicalSiteUrl : String
 canonicalSiteUrl =
-    "https://elm-pages-starter.netlify.com/"
+    "https://memriki.cogley.info"
 
 
 siteTagline : String
 siteTagline =
-    "Starter blog for elm-pages"
+    "Memriki in elm-pages"
 
 
 publishedDateView metadata =
     Element.text
         (metadata.published
-            |> Date.format "MMMM ddd, yyyy"
+            |> Date.format "EEEE, dd MMM, yyyy"
         )
 
 

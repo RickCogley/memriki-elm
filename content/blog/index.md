@@ -1,4 +1,4 @@
 ---
-title: elm-pages blog
+title: Memriki blog
 type: blog-index
 ---

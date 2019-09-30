@@ -165,7 +165,7 @@ content =
     } )
   ,
   ( ["blog"]
-    , { frontMatter = """{"title":"elm-pages blog","type":"blog-index"}
+    , { frontMatter = """{"title":"Memriki blog","type":"blog-index"}
 """ , body = Nothing
     , extension = "md"
     } )
@@ -177,7 +177,7 @@ content =
     } )
   ,
   ( []
-    , { frontMatter = """{"title":"Memriki - Rick Cogley's aide-memoire","type":"page"}
+    , { frontMatter = """{"title":"Memriki - Rick Cogley's aide-mémoire","type":"page"}
 """ , body = Nothing
     , extension = "md"
     } )
