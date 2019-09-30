@@ -78,6 +78,7 @@ allPages =
     [ (buildPage [ "blog", "draft" ])
     , (buildPage [ "blog", "hello" ])
     , (buildPage [ "blog" ])
+    , (buildPage [ "docs", "jrc-traditional-shaving" ])
     , (buildPage [  ])
     ]
 
@@ -87,6 +88,10 @@ pages =
         , hello = (buildPage [ "blog", "hello" ])
         , index = (buildPage [ "blog" ])
         , directory = directoryWithIndex ["blog"]
+        }
+    , docs =
+        { jrcTraditionalShaving = (buildPage [ "docs", "jrc-traditional-shaving" ])
+        , directory = directoryWithoutIndex ["docs"]
         }
     , index = (buildPage [  ])
     , directory = directoryWithIndex []
@@ -100,6 +105,7 @@ images =
         }
     , author =
         { dillon = (buildImage [ "author", "dillon.jpg" ])
+        , rick_cogley_mono = (buildImage [ "author", "rick_cogley_mono.JPG" ])
         , directory = directoryWithoutIndex ["author"]
         }
     , elmLogo = (buildImage [ "elm-logo.svg" ])
@@ -114,6 +120,7 @@ allImages =
     [(buildImage [ "article-covers", "hello.jpg" ])
     , (buildImage [ "article-covers", "mountains.jpg" ])
     , (buildImage [ "author", "dillon.jpg" ])
+    , (buildImage [ "author", "rick_cogley_mono.JPG" ])
     , (buildImage [ "elm-logo.svg" ])
     , (buildImage [ "github.svg" ])
     , (buildImage [ "icon-png.png" ])
@@ -146,13 +153,13 @@ content : List ( List String, { extension: String, frontMatter : String, body : 
 content =
     [ 
   ( ["blog", "draft"]
-    , { frontMatter = """{"type":"blog","author":"Dillon Kearns","title":"A Draft Blog Post","description":"I'm not quite ready to share this post with the world","image":"/images/article-covers/mountains.jpg","draft":true,"published":"2019-09-21"}
+    , { frontMatter = """{"type":"blog","author":"Rick Cogley","title":"A Draft Blog Post","description":"I'm not quite ready to share this post with the world","image":"/images/article-covers/mountains.jpg","draft":false,"published":"2019-09-21"}
 """ , body = Nothing
     , extension = "md"
     } )
   ,
   ( ["blog", "hello"]
-    , { frontMatter = """{"type":"blog","author":"Dillon Kearns","title":"Hello `elm-pages`! 🚀","description":"Here's an intro for my blog post to get you interested in reading more...","image":"/images/article-covers/hello.jpg","published":"2019-09-21"}
+    , { frontMatter = """{"type":"blog","author":"Rick Cogley","title":"Hello `elm-pages`! 🚀","description":"Here's an intro for my blog post to get you interested in reading more...","image":"/images/article-covers/hello.jpg","published":"2019-09-21"}
 """ , body = Nothing
     , extension = "md"
     } )
@@ -163,8 +170,14 @@ content =
     , extension = "md"
     } )
   ,
+  ( ["docs", "jrc-traditional-shaving"]
+    , { frontMatter = """{"type":"blog","author":"Rick Cogley","title":"Traditional Shaving Tips","description":"Some hints from my exploration of traditional shaving beginning in late summer 2019","image":"/images/article-covers/mountains.jpg","draft":false,"published":"2019-09-30"}
+""" , body = Nothing
+    , extension = "md"
+    } )
+  ,
   ( []
-    , { frontMatter = """{"title":"elm-pages-starter - a simple blog starter","type":"page"}
+    , { frontMatter = """{"title":"Memriki - Rick Cogley's aide-memoire","type":"page"}
 """ , body = Nothing
     , extension = "md"
     } )
